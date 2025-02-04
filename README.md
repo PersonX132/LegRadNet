@@ -18,7 +18,7 @@ LegRadNet is a deep learning pipeline for classifying knee radiographs (such as 
 10. [Grad-CAM Visualization](#grad-cam-visualization)  
 11. [Optuna Hyperparameter Tuning](#optuna-hyperparameter-tuning)  
 12. [Future Work](#future-work)  
-
+13. [License](#license)
 ---
 
 ## Introduction
@@ -231,3 +231,19 @@ python scripts/hparam_tuning.py --config ./configs/ensemble_config.yaml
    - Explore domain-specific transformations for knee radiographs, or apply self-supervised methods on unlabeled medical images.
 4. **Attention Visualization**  
    - For multi-head attention gating, a script could map how each backbone is weighted across multiple images.
+
+## License
+
+This project is licensed under the **MIT License**.
+
+This means **anyone** can:
+- **Use** this software for any purpose (personal, academic, commercial, etc.).
+- **Modify** and adapt it freely.
+- **Distribute** it, including selling or incorporating it into other projects.
+- **Sublicense** it under a different license if desired.
+
+The **only requirement** is that the original copyright notice is included in all copies or substantial portions of the software.
+
+This software is provided **"as is"**, without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement. In no event shall the author be liable for any claims, damages, or other liabilities.
+
+For full details, see the **[LICENSE](LICENSE)** file.
