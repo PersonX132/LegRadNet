@@ -1,0 +1,41 @@
+experiment_name: "leg_rad_net_with_mha_gating_and_optuna"
+
+data:
+  dataset_path: "./data/images"  # <-- Adjust as needed
+  csv_path: "./data/my_data.csv" # <-- Adjust as needed
+  image_size: 512
+  batch_size: 4
+  num_workers: 4
+  train_val_split: 0.8
+
+model:
+  backbones:
+    - densenet
+    - swin_transformer
+    - convnext
+    - vit
+    - xception
+  gating_network: true
+  gating_mode: "multi_head_attention"   # Default to multi-head attention
+  feature_dim: 1024
+  num_classes: 5
+  pretrained: true
+
+training:
+  epochs: 10
+  optimizer: "adamw"
+  learning_rate: 0.0001
+  weight_decay: 0.01
+  lr_scheduler: "cosine"
+  checkpoint_dir: "./checkpoints/"
+
+hyperparameter_tuning:
+  enable_optuna: true
+  n_trials: 10
+  param_spaces:
+    learning_rate:
+      low: 1e-5
+      high: 1e-3
+    weight_decay:
+      low: 1e-5
+      high: 1e-2
