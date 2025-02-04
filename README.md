@@ -115,7 +115,7 @@ LegRadNet/
 
 1. **Clone and Enter**:
    ```bash
-   git clone https://github.com/your-username/LegRadNet.git
+   git clone https://github.com/PersonX132/LegRadNet.git
    cd LegRadNet
    ```
 2. **Install Requirements**:
